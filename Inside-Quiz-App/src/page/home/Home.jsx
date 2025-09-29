@@ -6,7 +6,7 @@ import { joinRoom } from "../../services/gameService";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const BASE_URL = import.meta.env.BASE_URL;
+  const BASE_URL = import.meta.env.BASE_URL || "/";
   const [pin, setPin] = useState("");
   // Generate unique token for each session
   const token = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
